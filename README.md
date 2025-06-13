@@ -34,12 +34,20 @@ Un formulaire complet avec :
 - Boîte de dialogue de confirmation
 - Feedback visuel avec SnackBar
 
-```dart
-// Code de l'exercice 1...
+### Exercice 2 : Image avec interactions
 
+Une image avec système d'interaction comprenant :
+- Boutons Like/Dislike avec compteur
+- Ajout de commentaires
+- Liste persistante des commentaires
 
+### Exercice 3 : Liste dynamique
 
-
+Gestion d'une liste dynamique avec :
+- Ajout d'éléments via TextField
+ Sélection via Checkbox
+- Suppression conditionnelle
+- Feedback utilisateur
 
 
 
