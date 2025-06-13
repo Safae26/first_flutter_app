@@ -13,13 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Exercice 2',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color(0xFFFFB7B2),
-            primary: const Color(0xFFFFDAC1),
-            secondary: const Color(0xFFFFF4C4),
-          ),
-        ),
         home: const MyPage(),
     );
   }

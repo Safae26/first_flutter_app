@@ -15,13 +15,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Exercice 4',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFFB5EAD7),
-          primary: const Color(0xFFC7CEEA),
-          secondary: const Color(0xFFFFDAC1),
-        ),
-      ),
       home: const HomeScreen(),
     );
   }
