@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> _screens = const [
     Center(
       child: Text(
-        'TP5 – Application multi-écrans Flutter',
+        'Application multi-écrans Flutter',
         style: TextStyle(fontSize: 24),
       ),
     ),
