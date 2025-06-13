@@ -1,71 +1,54 @@
-# Application Multi-Écrans Flutter
+# Application multi-écrans Flutter
 
-## Présentation du Projet
-Cette application Flutter démontre l'implémentation de plusieurs fonctionnalités clés à travers 4 exercices distincts, intégrés dans une architecture multi-écrans avec navigation avancée.
+Cette application Flutter démontre plusieurs fonctionnalités clés à travers 4 exercices distincts, intégrés dans une interface interactive multi-écrans.
 
-## Stack Technologique
-- **Framework**: Flutter 
-- **Langage**: Dart 
-- **Outils**: 
-  - Flutter SDK
-  - Dart DevTools
-  - Android Studio
+## Fonctionnalités
 
+- Formulaire de validation avec contrôles
+- Système de likes/dislikes et commentaires
+- Liste dynamique avec sélection et suppression
+- Navigation entre écrans via Drawer et BottomNavigationBar
+- Thèmes personnalisés pour chaque écran
 
-## Fonctionnalités Détaillées
+## Technologies utilisées
+- Flutter 
+- Dart
 
-### 1. Module de Formulaire d'Inscription
-**Fichier**: `lib/screens/form_screen.dart`
+## Exercices
 
-| Composant               | Description                                                                 |
-|-------------------------|-----------------------------------------------------------------------------|
-| FormValidation          | Validation en temps réel des champs avec RegExp                             |
-| CustomTextFormField     | Widget réutilisable avec gestion d'erreurs                                  |
-| ConfirmationDialog      | Popup modale affichant les données soumises                                 |
-| SnackBarFeedback        | Notification contextuelle pour feedback utilisateur                         |
+### Exercice 1 : Formulaire d'inscription
 
-**Validations**:
-- Email: `RegExp(r'^[^@]+@[^@]+\.[^@]+')`
-- Mot de passe: Minimum 6 caractères
+Un formulaire complet avec :
+- Champs de formulaire pour nom complet, email et mot de passe
+- Validation en temps réel :
+  - Email doit contenir '@'
+  - Mot de passe doit avoir au moins 6 caractères
+- Boîte de dialogue de confirmation à la soumission
+- Feedback visuel avec SnackBar
 
-### 2. Module d'Interaction d'Image
-**Fichier**: `lib/screens/image_interaction_screen.dart`
+### Exercice 2 : Image avec interactions
 
-| Fonctionnalité         | Implémentation                                                              |
-|------------------------|-----------------------------------------------------------------------------|
-| Image aléatoire        | Intégration avec API HTTP (ex: picsum.photos)                               |
-| Système de votes       | State management avec Provider/Bloc                                         |
-| Commentaires           | Persistance locale avec Hive/SQLite                                         |
-| UI réactive            | Animations avec Flutter AnimationController                                 |
+Une image avec système d'interaction comprenant :
+- Affichage d'une image aléatoire
+- Boutons Like/Dislike avec compteurs
+- Ajout de commentaires
+- Liste persistante des commentaires
 
-### 3. Module de Liste Dynamique
-**Fichier**: `lib/screens/list_screen.dart`
+### Exercice 3 : Liste dynamique
 
-**Workflow**:
-1. Saisie utilisateur via `TextField`
-2. Ajout à la liste observable (`ValueNotifier`)
-3. Sélection via `CheckboxListTile`
-4. Suppression conditionnelle avec vérification
+Gestion d'une liste dynamique avec :
+- Ajout d'éléments à une liste via TextField
+- Sélection via Checkbox
+- Suppression conditionnelle (uniquement les éléments sélectionnés)
+- Feedback utilisateur si tentative de suppression sans sélection
 
-**Gestion d'erreurs**:
-- Affichage d'un `SnackBar` lorsque suppression sans sélection
+### Exercice 4 : Navigation multi-écrans
 
-### 4. Système de Navigation
-**Fichier**: `lib/main.dart`
-
-| Navigation             | Implémentation                                                              |
-|------------------------|-----------------------------------------------------------------------------|
-| DrawerNavigation       | `Scaffold.drawer` avec routes nommées                                       |
-| BottomNavigationBar    | PersistentState avec PageStorageBucket                                      |
-| Thèmes                 | ThemeData par écran avec héritage via Theme.of(context)                     |
-
-## Bonnes Pratiques Implementées
-- Séparation claire des responsabilités (SOLID)
-- Widgets réutilisables
-- Gestion d'état optimisée
-- UI responsive (LayoutBuilder)
-- Accessibilité (Semantics)
-- Internationalisation potentielle (i18n)
+Intégration des exercices dans une application unifiée avec :
+- Navigation par Drawer
+- Barre de navigation inférieure
+- Écran d'accueil
+- Thème cohérent
 
 ## Résultats : 
 <img width="782" alt="1" src="https://github.com/user-attachments/assets/9f51479a-13e5-4cac-b16f-8789d28b6ba2" />
