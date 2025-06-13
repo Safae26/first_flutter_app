@@ -2,16 +2,6 @@
 
 Cette application Flutter démontre plusieurs fonctionnalités clés à travers 4 exercices distincts, intégrés dans une interface interactive multi-écrans.
 
-## Table des matières
-- [Fonctionnalités](#fonctionnalités)
-- [Exercices](#exercices)
-  - [Exercice 1](#exercice-1--formulaire-dinscription)
-  - [Exercice 2](#exercice-2--image-avec-interactions)
-  - [Exercice 3](#exercice-3--liste-dynamique)
-  - [Exercice 4](#exercice-4--navigation-multi-écrans)
-- [Technologies utilisées](#technologies-utilisées)
-- [Auteur](#auteur)
-
 ## Fonctionnalités
 
 - Formulaire de validation avec contrôles
