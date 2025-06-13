@@ -17,10 +17,13 @@ Une application démonstrative des capacités de Flutter à travers 4 exercices 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 
+## Accueil
+![Formulaire](https://github.com/user-attachments/assets/9f51479a-13e5-4cac-b16f-8789d28b6ba2)
+
 ## 📚 Exercices Détaillés
 
 ### 1. Formulaire d'Inscription
-![Formulaire](https://github.com/user-attachments/assets/9f51479a-13e5-4cac-b16f-8789d28b6ba2)
+![Galerie](https://github.com/user-attachments/assets/b9b86038-09dc-4baa-8a05-7b5672ee1c48)
 
 - **Champs validés** :
   - ✅ Format email vérifié
@@ -29,7 +32,6 @@ Une application démonstrative des capacités de Flutter à travers 4 exercices 
 - **Feedback** visuel via SnackBar coloré
 
 ### 2. Galerie Interactive
-![Galerie](https://github.com/user-attachments/assets/b9b86038-09dc-4baa-8a05-7b5672ee1c48)
 
 - **Système de votes** :
   - 👍 Bouton Like (vert)
