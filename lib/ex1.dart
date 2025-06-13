@@ -129,7 +129,7 @@ class _FormPageState extends State<FormPage> {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
                     content: Text('Inscription validée avec succès !'),
-                    backgroundColor: const Color(0xFFE2F0CB),
+                    backgroundColor: Colors.green,
                   ),
                 );
               },
