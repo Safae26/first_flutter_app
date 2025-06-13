@@ -1,82 +1,68 @@
-# Application Multi-Écrans Flutter
+# Application multi-écrans Flutter
 
-Une application démonstrative des capacités de Flutter à travers 4 exercices interactifs intégrant des fonctionnalités modernes.
+Cette application Flutter démontre plusieurs fonctionnalités clés à travers 4 exercices distincts, intégrés dans une interface interactive multi-écrans.
 
-## Fonctionnalités Principales
+## Fonctionnalités
 
-| Fonctionnalité               | Description                                                                 |
-|------------------------------|-----------------------------------------------------------------------------|
-| 📝 **Formulaire intelligent** | Validation en temps réel avec feedback visuel                               |
-| **Système d'interactions**| Likes/Dislikes et commentaires persistants                                  |
-| **Liste dynamique**       | Gestion CRUD avec sélection intelligente                                    |
-| **Navigation avancée**    | Double système de navigation (Drawer + Barre inférieure)                   |
-| **Thèmes personnalisés**  | Palette de couleurs unique pour chaque écran                                |
+- Formulaire de validation avec contrôles
+- Système de likes/dislikes et commentaires
+- Liste dynamique avec sélection et suppression
+- Navigation entre écrans via Drawer et BottomNavigationBar
+- Thèmes personnalisés pour chaque écran
 
-## 🛠 Technologies Utilisées
+## Technologies utilisées
+- Flutter 
+- Dart
 
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+## Exercices
 
-## Accueil
-![Formulaire](https://github.com/user-attachments/assets/9f51479a-13e5-4cac-b16f-8789d28b6ba2)
+### Exercice 1 : Formulaire d'inscription
 
-## 📚 Exercices Détaillés
+Un formulaire complet avec :
+- Champs de formulaire pour nom complet, email et mot de passe
+- Validation en temps réel :
+  - Email doit contenir '@'
+  - Mot de passe doit avoir au moins 6 caractères
+- Boîte de dialogue de confirmation à la soumission
+- Feedback visuel avec SnackBar
 
-### 1. Formulaire d'Inscription
-![Galerie](https://github.com/user-attachments/assets/b9b86038-09dc-4baa-8a05-7b5672ee1c48)
+### Exercice 2 : Image avec interactions
 
-![Liste](https://github.com/user-attachments/assets/a6a2f1d6-80fa-4c4a-bd53-c3f96503271f)
+Une image avec système d'interaction comprenant :
+- Affichage d'une image aléatoire
+- Boutons Like/Dislike avec compteurs
+- Ajout de commentaires
+- Liste persistante des commentaires
 
-- **Champs validés** :
-  - ✅ Format email vérifié
-  - 🔒 Mot de passe sécurisé (6+ caractères)
-- **Confirmation** par boîte de dialogue modale
-- **Feedback** visuel via SnackBar coloré
+### Exercice 3 : Liste dynamique
 
-### 2. Galerie Interactive
+Gestion d'une liste dynamique avec :
+- Ajout d'éléments à une liste via TextField
+- Sélection via Checkbox
+- Suppression conditionnelle (uniquement les éléments sélectionnés)
+- Feedback utilisateur si tentative de suppression sans sélection
 
-- **Système de votes** :
-  - 👍 Bouton Like (vert)
-  - 👎 Bouton Dislike (rouge)
-- **Section commentaires** :
-  - ✏️ Ajout en temps réel
-  - 📜 Historique persisté
+### Exercice 4 : Navigation multi-écrans
 
-### 3. Gestion de Liste
+Intégration des exercices dans une application unifiée avec :
+- Navigation par Drawer
+- Barre de navigation inférieure
+- Écran d'accueil
+- Thème cohérent
 
-- **Fonctionnalités CRUD** :
-  - ➕ Ajout dynamique
-  - ☑️ Sélection multiple
-  - 🗑️ Suppression conditionnelle
-- **UI/UX** :
-  - 🎨 Cartes colorées
-  - ⚠️ Feedback contextuel
+## Résultats : 
+<img width="782" alt="1" src="https://github.com/user-attachments/assets/9f51479a-13e5-4cac-b16f-8789d28b6ba2" />
+<img width="783" alt="11" src="https://github.com/user-attachments/assets/eff7b5ee-d0b4-44e6-9f53-87b9a0111dad" />
+<img width="784" alt="2" src="https://github.com/user-attachments/assets/b9b86038-09dc-4baa-8a05-7b5672ee1c48" />
+<img width="782" alt="3" src="https://github.com/user-attachments/assets/a6a2f1d6-80fa-4c4a-bd53-c3f96503271f" />
+<img width="783" alt="4" src="https://github.com/user-attachments/assets/d575cc7c-28b4-4cf6-9c76-18aba35341b8" />
+<img width="783" alt="5" src="https://github.com/user-attachments/assets/c29057b6-874a-42df-95d0-5dbff26aab97" />
+<img width="782" alt="6" src="https://github.com/user-attachments/assets/ec3d5c44-9f67-4d9b-b620-c1c1ca120c42" />
+<img width="783" alt="7" src="https://github.com/user-attachments/assets/74f41c34-6b6b-433f-a4c2-23e18f650a0a" />
+<img width="782" alt="8" src="https://github.com/user-attachments/assets/3c826c84-bea1-495e-8537-4ec915b93a8e" />
+<img width="782" alt="9" src="https://github.com/user-attachments/assets/fc1800be-93ca-4a01-99f1-6bae5d0984fa" />
+<img width="782" alt="10" src="https://github.com/user-attachments/assets/e2f82d82-4de5-4356-9c10-612210ef0460" />
+<img width="785" alt="12" src="https://github.com/user-attachments/assets/0ca3904c-ab99-4869-a4dd-8db473937ea5" />
 
-### 4. Navigation Unifiée
-![Navigation](https://github.com/user-attachments/assets/d575cc7c-28b4-4cf6-9c76-18aba35341b8)
 
-- **Systèmes de navigation** :
-  - 🍔 Menu Drawer
-  - 🔍 Barre inférieure
-- **Consistance** :
-  - 🖌 Thème cohérent
-  - 🏠 Écran d'accueil
-
-## 🎨 Galerie d'Écrans
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/9f51479a-13e5-4cac-b16f-8789d28b6ba2" width="30%" />
-  <img src="https://github.com/user-attachments/assets/b9b86038-09dc-4baa-8a05-7b5672ee1c48" width="30%" /> 
-  <img src="https://github.com/user-attachments/assets/a6a2f1d6-80fa-4c4a-bd53-c3f96503271f" width="30%" />
-</div>
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/d575cc7c-28b4-4cf6-9c76-18aba35341b8" width="45%" />
-  <img src="https://github.com/user-attachments/assets/ec3d5c44-9f67-4d9b-b620-c1c1ca120c42" width="45%" />
-</div>
-
----
-
-## 👩‍💻 Auteure
-
-**Safae ERAJI**  
+## Auteur : **Safae ERAJI**
