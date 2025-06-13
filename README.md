@@ -22,6 +22,10 @@ Cette application Flutter démontre plusieurs fonctionnalités clés à travers 
 - Navigation entre écrans via Drawer et BottomNavigationBar
 - Thèmes personnalisés pour chaque écran
 
+## Technologies utilisées
+- Flutter 
+- Dart
+
 ## Exercices
 
 ### Exercice 1 : Formulaire d'inscription
@@ -58,9 +62,6 @@ Intégration des exercices dans une application unifiée avec :
 - Écran d'accueil
 - Thème cohérent
 
-
-## Technologies utilisées
-- Flutter 
-- Dart
+## Résultats : 
 
 ## Auteur : **Safae ERAJI**
