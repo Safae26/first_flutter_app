@@ -1,4 +1,74 @@
-# Flutter Interactive Components
+# TP5 - Application multi-écrans Flutter
+
+![Bannière Flutter](https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308f2c854.svg)
+
+Cette application Flutter démontre plusieurs fonctionnalités clés à travers 4 exercices distincts, intégrés dans une interface multi-écrans.
+
+## Table des matières
+- [Fonctionnalités](#fonctionnalités)
+- [Exercices](#exercices)
+  - [Exercice 1](#exercice-1--formulaire-dinscription)
+  - [Exercice 2](#exercice-2--image-avec-interactions)
+  - [Exercice 3](#exercice-3--liste-dynamique)
+  - [Exercice 4](#exercice-4--navigation-multi-écrans)
+- [Installation](#installation)
+- [Technologies utilisées](#technologies-utilisées)
+- [Captures d'écran](#captures-décran)
+- [Auteur](#auteur)
+
+## Fonctionnalités
+
+- Formulaire de validation avec contrôles
+- Système de likes/dislikes et commentaires
+- Liste dynamique avec sélection et suppression
+- Navigation entre écrans via Drawer et BottomNavigationBar
+- Thèmes personnalisés pour chaque écran
+
+## Exercices
+
+### Exercice 1 : Formulaire d'inscription
+
+Un formulaire complet avec :
+- Validation en temps réel
+- Contrôles de saisie (email, mot de passe)
+- Boîte de dialogue de confirmation
+- Feedback visuel avec SnackBar
+
+```dart
+// Code de l'exercice 1...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Ce projet Flutter démontre trois exemples d'interfaces interactives :
 
