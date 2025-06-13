@@ -1,140 +1,37 @@
-//Affichage d'une image avec Likes/Dislikes et Commentaires
+// Exercice 2 : Image avec Likes/Dislikes et Commentaires
 import 'package:flutter/material.dart';
 
 void main() {
-  return runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Exercice 2',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent)
-      ),
-      home: MyPage(),
+        title: 'Exercice 2',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
+    home: const MyPage(),
     );
   }
-  
 }
 
 class MyPage extends StatefulWidget {
+  const MyPage({super.key});
+
   @override
-  State<StatefulWidget> createState() => _MyPage();
+  State<MyPage> createState() => _MyPageState();
 }
 
-class _MyPage extends State<MyPage> {
-  int compteurLikes = 0;
-  int compteurDislikes = 0;
+class _MyPageState extends State<MyPage> {
+  int _likesCount = 0;
+  int _dislikesCount = 0;
   final TextEditingController _commentController = TextEditingController();
-  final List<String>? commentaires = [];
-
-  @override
-  Widget build(BuildContext context) {
-     
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Image avec Interactions'),
-        backgroundColor: Colors.blue,
-      ),
-      body: Column(
-        children: [
-          Image.network(
-              'https://picsum.photos/500/300'
-          ),
-          // Boutons Like/Dislike
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  icon: Icon(Icons.thumb_up, color: Colors.green),
-                  onPressed: () {
-                    setState(() {
-                      compteurLikes++;
-                    });
-                  },
-                ),
-                Text('$compteurLikes'),
-                SizedBox(width: 20),
-                IconButton(
-                  icon: Icon(Icons.thumb_down, color: Colors.red),
-                  onPressed: () {
-                    setState(() {
-                      compteurDislikes++;
-                    });
-                  },
-                ),
-                Text('$compteurDislikes'),
-              ],
-            ),
-          ),
-          // Champ d'ajout de commentaire
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Row(
-              children: [
-                Expanded(
-                  child: TextField(
-                    controller: _commentController,
-                    decoration: InputDecoration(
-                      hintText: 'Ajouter un commentaire...',
-                      border: OutlineInputBorder(),
-                    ),
-                    onSubmitted: (_) => _ajouterCommentaire(),
-                  ),
-                ),
-                SizedBox(width: 8),
-                ElevatedButton(
-                  onPressed: _ajouterCommentaire,
-                  child: Text('Commenter'),
-                ),
-              ],
-            ),
-          ),
-          // Titre Commentaires
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Commentaires',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
-
-          // Liste des commentaires
-          ListView.builder(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            itemCount: commentaires?.length,
-            itemBuilder: (context, index) {
-              return ListTile(
-                leading: Icon(Icons.comment),
-                title: Text(commentaires![index]),
-              );
-            },
-          ),
-        ],
-      ),
-    );
-  }
-
-  void _ajouterCommentaire() {
-    if (_commentController.text.isNotEmpty) {
-      setState(() {
-        commentaires!.add(_commentController.text);
-        _commentController.clear();
-      });
-    }
-  }
+  final List<String> _comments = [];
 
   @override
   void dispose() {
@@ -142,5 +39,98 @@ class _MyPage extends State<MyPage> {
     super.dispose();
   }
 
+  void _addComment() {
+    if (_commentController.text.trim().isNotEmpty) {
+      setState(() {
+        _comments.add(_commentController.text.trim());
+        _commentController.clear();
+      });
+    }
+  }
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Image avec Interactions'),
+        backgroundColor: Colors.blue,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.network(
+              'https://picsum.photos/500/300',
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.thumb_up, color: Colors.green),
+                    onPressed: () => setState(() => _likesCount++),
+                  ),
+                  Text('$_likesCount'),
+                  const SizedBox(width: 20),
+                  IconButton(
+                    icon: const Icon(Icons.thumb_down, color: Colors.red),
+                    onPressed: () => setState(() => _dislikesCount++),
+                  ),
+                  Text('$_dislikesCount'),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      controller: _commentController,
+                      decoration: const InputDecoration(
+                        hintText: 'Ajouter un commentaire...',
+                        border: OutlineInputBorder(),
+                      ),
+                      onSubmitted: (_) => _addComment(),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  ElevatedButton(
+                    onPressed: _addComment,
+                    child: const Text('Commenter'),
+                  ),
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Commentaires',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            ListView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: _comments.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  leading: const Icon(Icons.comment),
+                  title: Text(_comments[index]),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }

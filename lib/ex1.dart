@@ -1,90 +1,120 @@
-// Création d’un formulaire simple
-// Points essentiels :
-// validation des champs
-// affichage d'une boîte de dialogue (AlertDialog) à la soumission pour la confirmation ou l'annulation de l'enregistrement.
+// Exercice 1 : Formulaire simple
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Exercice 1',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent)
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent),
+        useMaterial3: true,
       ),
-      home: FormPage(),
+      home: const FormPage(),
     );
   }
 }
 
 class FormPage extends StatefulWidget {
+  const FormPage({super.key});
+
   @override
-  State<StatefulWidget> createState() => _FormPage();
+  State<FormPage> createState() => _FormPageState();
 }
 
-class _FormPage extends State<FormPage>{
+class _FormPageState extends State<FormPage> {
   final _formKey = GlobalKey<FormState>();
+  final _nomCompletController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    _nomCompletController.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Formulaire'),
+        title: const Text('Formulaire'),
         backgroundColor: Colors.blue,
       ),
-      body: Form(
-        key : _formKey,
-        child: Column(
-        children: [
-          TextFormField(
-          decoration: InputDecoration(
-          labelText: 'Nom complet',
-              hintText: 'Entrez votre nom complet'
-          )
-          ),
-          SizedBox(height: 24),
-          TextFormField(
-              decoration: InputDecoration(
-                  labelText: 'Email',
-                  hintText: 'Entrez votre adresse e-mail'
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              TextFormField(
+                controller: _nomCompletController,
+                decoration: const InputDecoration(
+                  labelText: 'Nom complet',
+                  hintText: 'Entrez votre nom complet',
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Veuillez saisir votre nom complet';
+                  }
+                  return null;
+                },
               ),
-            validator: (value) {
-                if(value==null || value.isEmpty==true) {
-                  return 'Veuillez saisir votre adresse e-mail';
-                }
-                if(!value.contains('@')) {
-                  return "L\'adresse e-mail doit necessairement contenir un @";
-                }
-                return null;
-            },
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _emailController,
+                decoration: const InputDecoration(
+                  labelText: 'Email',
+                  hintText: 'Entrez votre adresse e-mail',
+                ),
+                keyboardType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Veuillez saisir votre adresse e-mail';
+                  }
+                  if (!value.contains('@')) {
+                    return "L'adresse e-mail doit contenir un @";
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 16),
+              TextFormField(
+                controller: _passwordController,
+                decoration: const InputDecoration(
+                  labelText: 'Mot de passe',
+                  hintText: 'Entrez votre mot de passe',
+                ),
+                obscureText: true,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Veuillez saisir votre mot de passe';
+                  }
+                  if (value.length < 6) {
+                    return 'Le mot de passe doit contenir au moins 6 caractères';
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 24),
+              ElevatedButton(
+                onPressed: _submitForm,
+                child: const Text('S\'inscrire'),
+              ),
+            ],
           ),
-          SizedBox(height: 24),
-          TextFormField(
-            decoration: InputDecoration(
-                labelText: 'Mot de passe',
-                hintText: 'Entrez votre mot de passe'
-            ),
-            obscureText: true,
-            validator: (value) {
-              if(value!.length<6) {
-                return 'Le mot de passe doit contenir au moins 6 caracteres';
-              }
-              if(value==null || value.isEmpty==true) {
-                return 'Veuillez saisir votre mot de passe';
-              }
-              return null;
-            },
-          ),
-          SizedBox(height: 24),
-          ElevatedButton(onPressed: _submitForm, child: Text('S’inscrire'))
-        ]),
-      )
+        ),
+      ),
     );
   }
-
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
@@ -94,24 +124,31 @@ class _FormPage extends State<FormPage>{
 
   void _showConfirmationDialog() {
     showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text('Confirmation de l\'inscription'),
-            content: Text('Voulez-vous valider votre inscription ?'),
-            actions: [
-              TextButton(onPressed: () {
-                  Navigator.of(context).pop();
-                  ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Inscription validée avec succès !'),
-                      backgroundColor: Colors.green
-                  ));
-                  }, 
-                  child: Text('Valider')),
-              TextButton(onPressed: () {Navigator.of(context).pop();}, child: Text('Annuler'))
-            ],
-          );
-        }
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Confirmation de l\'inscription'),
+          content: const Text('Voulez-vous valider votre inscription ?'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Inscription validée avec succès !'),
+                    backgroundColor: Colors.green,
+                  ),
+                );
+              },
+              child: const Text('Valider'),
+            ),
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('Annuler'),
+            ),
+          ],
+        );
+      },
     );
   }
 }

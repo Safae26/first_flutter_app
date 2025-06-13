@@ -1,34 +1,33 @@
-//Gestion dynamique d’une liste avec Checkbox et suppression conditionnelle
-
+// Exercice 3 : Liste dynamique avec Checkbox
 import 'package:flutter/material.dart';
 
 void main() {
-  return runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Exercice 3',
-      theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent)
-      ),
-      home: DynamicListScreen(),
+        title: 'Exercice 3',
+        theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent),
+    home: const DynamicListScreen(),
     );
   }
 }
 
-class DynamicListScreen extends StatefulWidget{
+class DynamicListScreen extends StatefulWidget {
+  const DynamicListScreen({super.key});
+
   @override
-  State<StatefulWidget> createState() => _DynamicListScreen();
-  
+  State<DynamicListScreen> createState() => _DynamicListScreenState();
 }
 
-class _DynamicListScreen extends State<DynamicListScreen>{
-
+class _DynamicListScreenState extends State<DynamicListScreen> {
   final TextEditingController _nameController = TextEditingController();
-  final List<String>? noms = [];
   final List<Map<String, dynamic>> _items = [];
 
   void _toggleItem(int index) {
@@ -38,26 +37,24 @@ class _DynamicListScreen extends State<DynamicListScreen>{
   }
 
   void _addItem() {
-    if (_nameController.text.isNotEmpty) {
+    final text = _nameController.text.trim();
+    if (text.isNotEmpty) {
       setState(() {
-        _items.add(
-          {
-            'name' : _nameController.text,
-            'isSelected' : false
-          }
-        );
+        _items.add({
+          'name': text,
+          'isSelected': false,
+        });
       });
       _nameController.clear();
     }
   }
 
-  void _deleteItem(index) {
-    if (_items[index]['isSelected']==true) {
+  void _deleteItem(int index) {
+    if (_items[index]['isSelected']) {
       setState(() {
         _items.removeAt(index);
       });
-    }
-    else {
+    } else {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Veuillez sélectionner l\'élément avant de le supprimer'),
@@ -67,46 +64,54 @@ class _DynamicListScreen extends State<DynamicListScreen>{
   }
 
   @override
+  void dispose() {
+    _nameController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Liste dynamique'),
+        title: const Text('Liste dynamique'),
         backgroundColor: Colors.orange,
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             TextField(
               controller: _nameController,
-              decoration: InputDecoration(
-                labelText: 'Nom et Prenom',
-                hintText: 'Entrez votre Nom et Prenom',
+              decoration: const InputDecoration(
+                labelText: 'Nom et Prénom',
+                hintText: 'Entrez votre Nom et Prénom',
+                border: OutlineInputBorder(),
               ),
+              onSubmitted: (_) => _addItem(),
             ),
-            SizedBox(height: 10),
-            IconButton(
-              icon: const Icon(Icons.add),
+            const SizedBox(height: 10),
+            ElevatedButton(
               onPressed: _addItem,
+              child: const Text('Ajouter'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Expanded(
               child: ListView.builder(
                 itemCount: _items.length,
                 itemBuilder: (context, index) {
-                  return ListTile(
-                    leading: Checkbox(
-                      value: _items[index]['isSelected'],
-                      onChanged: (bool? value) {
-                        _toggleItem(index);
-                      },
-                    ),
-                    title: Text(_items[index]['name']),
-                    trailing: IconButton(
-                      icon: Icon(Icons.delete),
-                      onPressed: () {
-                        _deleteItem(index);
-                      },
+                  return Card(
+                    child: ListTile(
+                      leading: Checkbox(
+                        value: _items[index]['isSelected'],
+                        onChanged: (bool? value) {
+                          _toggleItem(index);
+                        },
+                      ),
+                      title: Text(_items[index]['name']),
+                      trailing: IconButton(
+                        icon: const Icon(Icons.delete, color: Colors.red),
+                        onPressed: () => _deleteItem(index),
+                      ),
                     ),
                   );
                 },
@@ -117,5 +122,4 @@ class _DynamicListScreen extends State<DynamicListScreen>{
       ),
     );
   }
-
 }
