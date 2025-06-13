@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
         title: 'Exercice 3',
         theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent),
-    home: const DynamicListScreen(),
+        ),
+        home: const DynamicListScreen(),
     );
   }
 }

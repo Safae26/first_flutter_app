@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
-    home: const MyPage(),
+        ),
+        home: const MyPage(),
     );
   }
 }
