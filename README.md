@@ -1,16 +1,35 @@
-# first_flutter_app
+# Flutter Interactive Components
 
-A new Flutter project.
+Ce projet Flutter démontre trois exemples d'interfaces interactives :
 
-## Getting Started
+1. Un formulaire avec validation
+2. Une image avec système de likes/dislikes et commentaires
+3. Une liste dynamique avec sélection et suppression conditionnelle
 
-This project is a starting point for a Flutter application.
+## Fonctionnalités
 
-A few resources to get you started if this is your first Flutter project:
+### 1. Formulaire de validation (Exercice 1)
+- Champs de formulaire pour nom complet, email et mot de passe
+- Validation en temps réel :
+  - Email doit contenir '@'
+  - Mot de passe doit avoir au moins 6 caractères
+- Boîte de dialogue de confirmation à la soumission
+- Feedback visuel avec Snackbar
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 2. Image interactive (Exercice 2)
+- Affichage d'une image aléatoire
+- Système de likes/dislikes avec compteurs
+- Ajout de commentaires
+- Liste des commentaires affichés
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 3. Liste dynamique (Exercice 3)
+- Ajout d'éléments à une liste
+- Sélection via checkbox
+- Suppression conditionnelle (uniquement les éléments sélectionnés)
+- Feedback si tentative de suppression sans sélection
+
+## Technologies utilisées
+
+- Flutter 3.0+
+- Dart 2.17+
+- Material Design
