@@ -1,4 +1,4 @@
-# TP5 - Application multi-écrans Flutter
+# Application multi-écrans Flutter
 
 ![Bannière Flutter](https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308f2c854.svg)
 
