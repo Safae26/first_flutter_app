@@ -14,8 +14,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Exercice 4',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreenAccent),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFFB5EAD7),
+          primary: const Color(0xFFC7CEEA),
+          secondary: const Color(0xFFFFDAC1),
+        ),
       ),
       home: const HomeScreen(),
     );
@@ -56,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_titles[_currentIndex]),
-        backgroundColor: Colors.lightGreen,
+        backgroundColor: const Color(0xFFA2C7E5),
       ),
       drawer: Drawer(
         child: ListView(
@@ -64,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.lightGreen,
+                color: const Color(0xFFA2C7E5),
               ),
               child: Text(
                 'Menu de navigation',
@@ -97,7 +102,9 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'EX3',
           ),
         ],
-        selectedItemColor: Colors.lightGreen,
+        selectedItemColor: const Color(0xFF6B8EAC),
+        unselectedItemColor: const Color(0xFFC1CDD9),
+        backgroundColor: const Color(0xFFE8F4F8),
       ),
     );
   }

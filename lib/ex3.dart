@@ -12,8 +12,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Exercice 3',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent),
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color(0xFFC7CEEA),
+            primary: const Color(0xFFD8BFD8),
+            secondary: const Color(0xFFE6E6FA),
+          ),
         ),
         home: const DynamicListScreen(),
     );
@@ -73,10 +78,6 @@ class _DynamicListScreenState extends State<DynamicListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Liste dynamique'),
-        backgroundColor: Colors.orange,
-      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -101,6 +102,7 @@ class _DynamicListScreenState extends State<DynamicListScreen> {
                 itemCount: _items.length,
                 itemBuilder: (context, index) {
                   return Card(
+                    color: const Color(0xFFF0E6FF),
                     child: ListTile(
                       leading: Checkbox(
                         value: _items[index]['isSelected'],
@@ -110,7 +112,7 @@ class _DynamicListScreenState extends State<DynamicListScreen> {
                       ),
                       title: Text(_items[index]['name']),
                       trailing: IconButton(
-                        icon: const Icon(Icons.delete, color: Colors.red),
+                        icon: const Icon(Icons.delete, color: Color(0xFFFF746C)),
                         onPressed: () => _deleteItem(index),
                       ),
                     ),

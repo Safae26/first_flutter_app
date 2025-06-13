@@ -12,8 +12,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Exercice 1',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF9BE7D8),
+          primary: const Color(0xFFB5EAD7),
+          secondary: const Color(0xFFE2F0CB),
+        ),
         useMaterial3: true,
       ),
       home: const FormPage(),
@@ -45,10 +50,6 @@ class _FormPageState extends State<FormPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Formulaire'),
-        backgroundColor: Colors.blue,
-      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
@@ -136,7 +137,7 @@ class _FormPageState extends State<FormPage> {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
                     content: Text('Inscription validée avec succès !'),
-                    backgroundColor: Colors.green,
+                    backgroundColor: const Color(0xFFE2F0CB),
                   ),
                 );
               },

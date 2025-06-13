@@ -14,7 +14,11 @@ class MyApp extends StatelessWidget {
         title: 'Exercice 2',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color(0xFFFFB7B2),
+            primary: const Color(0xFFFFDAC1),
+            secondary: const Color(0xFFFFF4C4),
+          ),
         ),
         home: const MyPage(),
     );
@@ -52,16 +56,13 @@ class _MyPageState extends State<MyPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Image avec Interactions'),
-        backgroundColor: Colors.blue,
-      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Padding(padding: const EdgeInsets.all(16.0)),
             Image.network(
               'https://picsum.photos/500/300',
-              width: double.infinity,
+              width: 500,
               fit: BoxFit.cover,
             ),
             Padding(
@@ -70,13 +71,13 @@ class _MyPageState extends State<MyPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.thumb_up, color: Colors.green),
+                    icon: const Icon(Icons.thumb_up, color: const Color(0xFF88D8C0)),
                     onPressed: () => setState(() => _likesCount++),
                   ),
                   Text('$_likesCount'),
                   const SizedBox(width: 20),
                   IconButton(
-                    icon: const Icon(Icons.thumb_down, color: Colors.red),
+                    icon: const Icon(Icons.thumb_down, color: const Color(0xFFFF6B6B)),
                     onPressed: () => setState(() => _dislikesCount++),
                   ),
                   Text('$_dislikesCount'),
