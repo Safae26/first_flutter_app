@@ -1,18 +1,16 @@
-# 🚀 Application Multi-Écrans Flutter
-
-![Bannière Flutter](https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308f2c854.svg)
+# Application Multi-Écrans Flutter
 
 Une application démonstrative des capacités de Flutter à travers 4 exercices interactifs intégrant des fonctionnalités modernes.
 
-## ✨ Fonctionnalités Principales
+## Fonctionnalités Principales
 
 | Fonctionnalité               | Description                                                                 |
 |------------------------------|-----------------------------------------------------------------------------|
 | 📝 **Formulaire intelligent** | Validation en temps réel avec feedback visuel                               |
-| ❤️ **Système d'interactions**| Likes/Dislikes et commentaires persistants                                  |
-| 🛠️ **Liste dynamique**       | Gestion CRUD avec sélection intelligente                                    |
-| 🧭 **Navigation avancée**    | Double système de navigation (Drawer + Barre inférieure)                   |
-| 🎨 **Thèmes personnalisés**  | Palette de couleurs unique pour chaque écran                                |
+| **Système d'interactions**| Likes/Dislikes et commentaires persistants                                  |
+| **Liste dynamique**       | Gestion CRUD avec sélection intelligente                                    |
+| **Navigation avancée**    | Double système de navigation (Drawer + Barre inférieure)                   |
+| **Thèmes personnalisés**  | Palette de couleurs unique pour chaque écran                                |
 
 ## 🛠 Technologies Utilisées
 
@@ -74,14 +72,8 @@ Une application démonstrative des capacités de Flutter à travers 4 exercices 
   <img src="https://github.com/user-attachments/assets/ec3d5c44-9f67-4d9b-b620-c1c1ca120c42" width="45%" />
 </div>
 
+---
+
 ## 👩‍💻 Auteure
 
 **Safae ERAJI**  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/votreprofil)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/votreprofil)
-
----
-
-<div align="center">
-  <em>✨ Projet réalisé avec Flutter 3.13.0 ✨</em>
-</div>
