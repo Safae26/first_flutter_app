@@ -25,6 +25,8 @@ Une application démonstrative des capacités de Flutter à travers 4 exercices 
 ### 1. Formulaire d'Inscription
 ![Galerie](https://github.com/user-attachments/assets/b9b86038-09dc-4baa-8a05-7b5672ee1c48)
 
+![Liste](https://github.com/user-attachments/assets/a6a2f1d6-80fa-4c4a-bd53-c3f96503271f)
+
 - **Champs validés** :
   - ✅ Format email vérifié
   - 🔒 Mot de passe sécurisé (6+ caractères)
@@ -41,7 +43,6 @@ Une application démonstrative des capacités de Flutter à travers 4 exercices 
   - 📜 Historique persisté
 
 ### 3. Gestion de Liste
-![Liste](https://github.com/user-attachments/assets/a6a2f1d6-80fa-4c4a-bd53-c3f96503271f)
 
 - **Fonctionnalités CRUD** :
   - ➕ Ajout dynamique
