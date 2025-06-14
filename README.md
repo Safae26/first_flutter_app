@@ -62,6 +62,7 @@ Intégration des exercices dans une application unifiée avec :
 <img width="782" alt="8" src="https://github.com/user-attachments/assets/3c826c84-bea1-495e-8537-4ec915b93a8e" />
 <img width="782" alt="9" src="https://github.com/user-attachments/assets/fc1800be-93ca-4a01-99f1-6bae5d0984fa" />
 <img width="782" alt="10" src="https://github.com/user-attachments/assets/e2f82d82-4de5-4356-9c10-612210ef0460" />
+Option 2 : Drawer de navigation
 <img width="785" alt="12" src="https://github.com/user-attachments/assets/0ca3904c-ab99-4869-a4dd-8db473937ea5" />
 
 
