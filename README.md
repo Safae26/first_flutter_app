@@ -61,6 +61,7 @@ Option 2 : Drawer de navigation
 
 <img width="785" alt="12" src="https://github.com/user-attachments/assets/0ca3904c-ab99-4869-a4dd-8db473937ea5" />
 
+Formulaire :
 <img width="783" alt="11" src="https://github.com/user-attachments/assets/eff7b5ee-d0b4-44e6-9f53-87b9a0111dad" />
 <img width="784" alt="2" src="https://github.com/user-attachments/assets/b9b86038-09dc-4baa-8a05-7b5672ee1c48" />
 <img width="782" alt="3" src="https://github.com/user-attachments/assets/a6a2f1d6-80fa-4c4a-bd53-c3f96503271f" />
