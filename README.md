@@ -67,9 +67,12 @@ Formulaire :
 <img width="784" alt="2" src="https://github.com/user-attachments/assets/b9b86038-09dc-4baa-8a05-7b5672ee1c48" />
 <img width="782" alt="3" src="https://github.com/user-attachments/assets/a6a2f1d6-80fa-4c4a-bd53-c3f96503271f" />
 <img width="783" alt="4" src="https://github.com/user-attachments/assets/d575cc7c-28b4-4cf6-9c76-18aba35341b8" />
+
+Interaction avec image :
 <img width="783" alt="5" src="https://github.com/user-attachments/assets/c29057b6-874a-42df-95d0-5dbff26aab97" />
 <img width="782" alt="6" src="https://github.com/user-attachments/assets/ec3d5c44-9f67-4d9b-b620-c1c1ca120c42" />
 <img width="783" alt="7" src="https://github.com/user-attachments/assets/74f41c34-6b6b-433f-a4c2-23e18f650a0a" />
+
 <img width="782" alt="8" src="https://github.com/user-attachments/assets/3c826c84-bea1-495e-8537-4ec915b93a8e" />
 <img width="782" alt="9" src="https://github.com/user-attachments/assets/fc1800be-93ca-4a01-99f1-6bae5d0984fa" />
 <img width="782" alt="10" src="https://github.com/user-attachments/assets/e2f82d82-4de5-4356-9c10-612210ef0460" />
