@@ -51,6 +51,8 @@ Intégration des exercices dans une application unifiée avec :
 - Thème cohérent
 
 ## Résultats : 
+Accueil : 
+Option 1 : BottomNavigationBar
 <img width="782" alt="1" src="https://github.com/user-attachments/assets/9f51479a-13e5-4cac-b16f-8789d28b6ba2" />
 <img width="783" alt="11" src="https://github.com/user-attachments/assets/eff7b5ee-d0b4-44e6-9f53-87b9a0111dad" />
 <img width="784" alt="2" src="https://github.com/user-attachments/assets/b9b86038-09dc-4baa-8a05-7b5672ee1c48" />
